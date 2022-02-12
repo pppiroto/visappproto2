@@ -20,3 +20,28 @@ $ dotnet add ./visappproto2_test/visappproto2_test.csproj reference ./visappprot
 $ cd visappproto2
 $ dotnet watch run
 ```
+
+# [Angular](https://angular.io/)
+## CLI
+```
+$ npm install -g @angular/cli@12.2.2
+```
+
+# [Angular Material](https://material.angular.io/)
+
+```
+$ cd visappproto2/ClientApp
+$ ng add @angular/material
+
+✔ Package successfully installed.
+? Choose a prebuilt theme name, or "custom" for a custom theme: Custom
+? Set up global Angular Material typography styles? Yes
+? Set up browser animations for Angular Material? Yes
+UPDATE package.json (1791 bytes)
+✔ Packages installed successfully.
+CREATE src/custom-theme.scss (1472 bytes)
+UPDATE src/app/app.module.ts (1313 bytes)
+UPDATE angular.json (4118 bytes)
+UPDATE src/index.html (639 bytes)
+UPDATE src/styles.css (396 bytes)
+```
