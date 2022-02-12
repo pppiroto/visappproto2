@@ -31,57 +31,14 @@
 </header>
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
+    <mat-selection-list #links [multiple]="false">
+      <mat-list-option *ngFor="let link of linkMenus" [value]="link.id">
+        <mat-list-item role="listitem" [routerLink]="[link.link]">{{link.title}}</mat-list-item>
+      </mat-list-option>
+    </mat-selection-list>
   </mat-drawer>
 
-  <div class="container">
+  <div class="example-sidenav-content">
     <router-outlet></router-outlet>
   </div>
 </mat-drawer-container>
-
-<!--
-  <header>
-    <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
-    >
-    <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">visappproto2</a>
-      <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target=".navbar-collapse"
-      aria-label="Toggle navigation"
-      [attr.aria-expanded]="isExpanded"
-      (click)="toggle()"
-      >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div
-    class="navbar-collapse collapse d-sm-inline-flex justify-content-end"
-    [ngClass]="{ show: isExpanded }"
-    >
-    <ul class="navbar-nav flex-grow">
-      <li
-      class="nav-item"
-      [routerLinkActive]="['link-active']"
-      [routerLinkActiveOptions]="{ exact: true }"
-      >
-      <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
-    </li>
-    <li class="nav-item" [routerLinkActive]="['link-active']">
-      <a class="nav-link text-dark" [routerLink]="['/counter']"
-      >Counter</a
-      >
-    </li>
-    <li class="nav-item" [routerLinkActive]="['link-active']">
-      <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
-      >Fetch data</a
-      >
-    </li>
-  </ul>
-</div>
-</div>
-</nav>
-</header>
--->

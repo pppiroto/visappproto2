@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class NavMenuComponent {
   isExpanded = false;
+  linkMenus: any[] = [
+    {id:"home",        title:"home",         link:"/"},
+    //{id:"main",        title:"main",         link:"/main"},
+    //{id:"sakila",      title:"sakila",       link:"/sakila"},
+    {id:"counter",     title:"counter",      link:"/counter"},
+    {id:"fetch-data",  title:"fetch-data",   link:"/fetch-data"},
+  ];
 
   collapse() {
     this.isExpanded = false;
